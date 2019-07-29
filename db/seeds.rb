@@ -21,4 +21,4 @@ Like.create(heart: true, comment: "Can't live with it, can't live without it. R.
 Connection.create(companion: 2, user_id: 1, meetup_id: 1)
 Connection.create(companion: 1, user_id: 2, meetup_id: 1)
 
-p "seeded"
+p "seed"
