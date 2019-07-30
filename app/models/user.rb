@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
     
 
-    validates :name, :username, :password, :age, presence: true
+    validates :first_name, :last_name, :username, :password, :age, presence: true
     validates :username, uniqueness: true
     validates :age, numericality: true
 

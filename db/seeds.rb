@@ -14,8 +14,8 @@ Connection.destroy_all
 
 
 Interest.create(name: "Pokemon")
-User.create(name: "jimbo", username: "bimbo", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
-User.create(name: "jimbo", username: "KIMBO", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
+User.create(first_name: "jimbo", last_name: "bimbos", username: "bimbo", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
+User.create(first_name: "jimbo", last_name: "limbo", username: "KIMBO", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
 Meetup.create(description: "went to a bar")
 Like.create(heart: true, comment: "Can't live with it, can't live without it. R.I.P Life", user_id: 1, interest_id: 1)
 Connection.create(companion: 2, user_id: 1, meetup_id: 1)
