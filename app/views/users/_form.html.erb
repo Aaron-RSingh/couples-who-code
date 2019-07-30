@@ -1,0 +1,33 @@
+<%= form_for (@user) do |f| %>
+<ul>
+  <li><%= f.label  :username %>
+  <%= f.text_field :username %></li>
+
+  <li><%= f.label  :password%>
+  <%= f.password_field :password %></li>
+  
+  <li><%= f.label  :first_name %>
+  <%= f.text_field :first_name %></li>
+
+  <li><%= f.label  :last_name %>
+  <%= f.text_field :last_name %></li>
+
+  <li><%= f.label :age %>
+  <%= f.number_field :age %></li>
+
+  <li><%= f.label :tagline %>
+  <%= f.text_area :tagline %></li>
+  
+  <li><%= f.label :bio %>
+  <%= f.text_area :bio %></li>
+
+  <li><%= f.label :image %>
+  <%= f.file_field :image %></li>
+  
+</ul>
+  <%= f.submit %>
+  <% end %>
+
+
+
+

@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   # get '/interests', to: 'interests#index'
 
-  get '/', to: 'users#home'
-
-
+  get '/', to: 'users#home', as: 'users'
+  post '/', to: 'users#create'
+  get '/new', to: 'users#new', as: 'new_user'
+  get '/login', to: "sessions#new", as: 'login'
+  post "/sessions", to: "sessions#create"
+  delete "/sessions", to: "sessions#destroy", as: "logout"
 end
