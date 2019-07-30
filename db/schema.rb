@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_30_110434) do
+ActiveRecord::Schema.define(version: 2019_07_29_150558) do
 
   create_table "connections", force: :cascade do |t|
     t.integer "companion"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 2019_07_30_110434) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
     t.string "username"
     t.string "password_digest"
     t.string "tagline"
@@ -54,8 +56,6 @@ ActiveRecord::Schema.define(version: 2019_07_30_110434) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "first_name"
-    t.string "last_name"
   end
 
 end

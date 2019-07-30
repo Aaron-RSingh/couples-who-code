@@ -1,2 +1,6 @@
-<h1>this is the interests index page</h1>
+<h1>Congratulations on creating your account!</h1>
+<h3>In order to create a match, please complete the following sentence: </h3>
+<h3>I cannot live without <%= collection_select(:user, :interest_id, Interest.all, :id, :name) %></h3> 
+
+
 

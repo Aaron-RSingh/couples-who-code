@@ -21,4 +21,25 @@ Like.create(heart: true, comment: "Can't live with it, can't live without it. R.
 Connection.create(companion: 2, user_id: 1, meetup_id: 1)
 Connection.create(companion: 1, user_id: 2, meetup_id: 1)
 
+interests = [
+  {name: "Dungeons & Dragons"},
+  {name: "Raspberry Pi"},
+  {name: "Artifical Intelligence"},
+  {name: "Science Fiction"}, 
+  {name: "Ferret Racing"}, 
+  {name: "Netflix 'n' Chill"}, 
+  {name: "Streaking"}, 
+  {name: "Tying Knots"}, 
+  {name: "Pokemon"}, 
+  {name: "Bugs"}, 
+  {name: "Astronomy"}, 
+  {name: "Farmville"}, 
+  {name: "Witch Craft"}, 
+  {name: "Harry Potter"}, 
+  {name: "Sports"}, 
+  {name: "Planking"}
+]
+
+interests.each {|interest| Interest.create(interest)}
+
 p "seed"
