@@ -8,18 +8,26 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
+  <div>
   <body>
       <% if flash[:notice] %>
       <h4><%= flash[:notice] %></h4>
     <% end %>
 
     <% if current_user %>
+    <img border="0" src="https://cdn-images-1.medium.com/max/800/1*7MwRs-erEruDCTv6TtKLIA.jpeg" width="0" height="100">
+      <button><%= link_to "My Profile", users_path %></button>
+      <button><%= link_to "My Dates", users_path %></button>
+      <button><%= link_to "Interests", users_path %></button>
+      <button><%= link_to "Logout", logout_path, method: :delete %></button>
       <h2>Hi, <%= current_user.username %>!</h2>
-      <%= link_to "Logout", logout_path, method: :delete %>
     <% else %>
-      <%= link_to "Login", login_path %>
+    <img border="0" src="https://cdn-images-1.medium.com/max/800/1*7MwRs-erEruDCTv6TtKLIA.jpeg" width="60" height="60">
+      <button><%= link_to "Login", login_path %></button> 
+      <button><%=link_to "Sign Up", "/new" %></button>
     <% end %>
     <%= yield %>
   </body>
+  </div>
 </html>
