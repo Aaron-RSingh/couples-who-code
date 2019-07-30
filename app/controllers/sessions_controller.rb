@@ -6,9 +6,10 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:user][:username])
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
+      redirect_to user_path(@user)
       # redirect_to pets_path
     else
-      flash.now[:notice] = "Sorry, we can't find a user with that password. Please try again."
+      flash.now[:notice] = "Sorry, we can't find a user with those credentials. Please try again."
       render :new
     end
   end

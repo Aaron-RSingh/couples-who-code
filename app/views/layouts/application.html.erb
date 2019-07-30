@@ -16,14 +16,14 @@
     <% end %>
 
     <% if current_user %>
-    <img border="0" src="https://cdn-images-1.medium.com/max/800/1*7MwRs-erEruDCTv6TtKLIA.jpeg" width="0" height="100">
+    <%= image_tag("logo/CWC LOGO.png", width: 60, height: 50) %>
       <button><%= link_to "My Profile", users_path %></button>
       <button><%= link_to "My Dates", users_path %></button>
       <button><%= link_to "Interests", users_path %></button>
       <button><%= link_to "Logout", logout_path, method: :delete %></button>
       <h2>Hi, <%= current_user.username %>!</h2>
     <% else %>
-    <img border="0" src="https://cdn-images-1.medium.com/max/800/1*7MwRs-erEruDCTv6TtKLIA.jpeg" width="60" height="60">
+    <%= image_tag("logo/CWC LOGO.png", width: 60, height: 50) %>
       <button><%= link_to "Login", login_path %></button> 
       <button><%=link_to "Sign Up", "/new" %></button>
     <% end %>
