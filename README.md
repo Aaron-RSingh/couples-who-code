@@ -22,6 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# hi
-# couples-who-code
+
 # couples-who-code
