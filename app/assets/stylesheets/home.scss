@@ -1,8 +1,39 @@
-.bg {
-    background-image: url('../images/logo/beach-romantic.png'); 
-    height: 100%;
+// .bg {
+//     background-image: url('https://smartfindsmarketing.com/news/four-things-couples-know-infertility/AdobeStock_77080511-couple-with-computer-1024x683.jpg'); 
+//     height: 600px;
  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
- }
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//  }
+
+.carousel {
+    height: 500px;
+    margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    width: 100%;
+    height: 500px;
+    background-color: #777;
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+
+@media (min-width: 768px) {
+    .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 21px;
+            line-height: 1.4;
+    }
+}

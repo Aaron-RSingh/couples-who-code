@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<h1>Code. Match. Date</h1>
+</head>
 <body>
 
-</head>
-<div class="bg"></div>
+<div class="bg">
+<h1>Code. Match. Date</h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= link_to image_tag("logo/couplescode.jpg", alt: "Couple with laptop", 
+                    class: "img-responsive")%>
+    </div>
+
+    <div class="item">
+      <%= link_to image_tag("logo/couplehands.jpg", alt: "Hand holding", 
+                    class: "img-responsive")%>
+    </div>
+
+    <div class="item">
+       <%=link_to image_tag("logo/takingphoto.jpg", alt: "Taking a photo", 
+                    class: "img-responsive")%>
+    </div>
+  </div>
+
+  <div class="item">
+       <%= link_to image_tag("logo/beachdrinks.jpg", alt: "drinks on a beach", 
+                    class: "img-responsive")%>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 <div>By clicking sign up you agree to the terms & conditions.</div>
+</div>
 </body>
 </html>
+
+
+
 
