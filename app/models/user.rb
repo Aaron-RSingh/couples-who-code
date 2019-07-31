@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     has_secure_password
+    validates_format_of :email, with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
     has_many :connections
     has_many :likes
@@ -8,8 +9,8 @@ class User < ApplicationRecord
 
     
 
-    validates :first_name, :last_name, :username, :password, :age, presence: true
-    validates :username, uniqueness: true
+    validates :first_name, :last_name, :email, :password, :age, presence: true
+    validates :email, uniqueness: true
     validates :age, numericality: true
 
 end

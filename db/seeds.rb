@@ -14,11 +14,32 @@ Connection.destroy_all
 
 
 Interest.create(name: "Pokemon")
-User.create(first_name: "jimbo", last_name: "bimbos", username: "bimbo", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
-User.create(first_name: "jimbo", last_name: "limbo", username: "KIMBO", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
+User.create(first_name: "jimbo", last_name: "bimbos", email: "jimbo.bimbo@gmail.com", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
+User.create(first_name: "jimbo", last_name: "limbo", email: "jimbo.kimbo@gmail.com", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
 Meetup.create(description: "went to a bar")
 Like.create(heart: true, comment: "Can't live with it, can't live without it. R.I.P Life", user_id: 1, interest_id: 1)
 Connection.create(companion: 2, user_id: 1, meetup_id: 1)
 Connection.create(companion: 1, user_id: 2, meetup_id: 1)
+
+interests = [
+  {name: "Dungeons & Dragons"},
+  {name: "Raspberry Pi"},
+  {name: "Artifical Intelligence"},
+  {name: "Science Fiction"}, 
+  {name: "Ferret Racing"}, 
+  {name: "Netflix 'n' Chill"}, 
+  {name: "Streaking"}, 
+  {name: "Tying Knots"}, 
+  {name: "Pokemon"}, 
+  {name: "Bugs"}, 
+  {name: "Astronomy"}, 
+  {name: "Farmville"}, 
+  {name: "Witch Craft"}, 
+  {name: "Harry Potter"}, 
+  {name: "Sports"}, 
+  {name: "Planking"}
+]
+
+interests.each {|interest| Interest.create(interest)}
 
 p "seed"

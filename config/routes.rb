@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   #session
   get '/login', to: "sessions#new", as: 'login'
+  get '/likes', to: "likes#index", as: 'likes'
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy", as: "logout"
 end
