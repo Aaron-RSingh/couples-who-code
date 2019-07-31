@@ -1,9 +1,9 @@
 <%= form_for (@user) do |f| %>
 <ul>
-  <li><%= f.label  :create_a_username %>
-  <%= f.text_field :username %></li>
+  <li><%= f.label  :email %>
+  <%= f.text_field :email %></li>
 
-  <li><%= f.label  :create_a_password%>
+  <li><%= f.label  :create_a_secure_password%>
   <%= f.password_field :password %></li>
   
   <li><%= f.label  :first_name %>

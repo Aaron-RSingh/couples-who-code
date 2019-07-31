@@ -1,0 +1,6 @@
+<%= form_for (@like) do |f| %>
+<ul>
+  <li><h1>I cannot live without: <%= collection_select(:interest_id, Interest.all, :id, :name) %></h1></li> 
+</ul>
+  <%= f.submit %>
+  <% end %>

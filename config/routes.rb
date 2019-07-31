@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post '/', to: 'users#create'
   get '/new', to: 'users#new', as: 'new_user'
   get '/login', to: "sessions#new", as: 'login'
-  get '/interests', to: "interests#index", as: 'interests'
+  get '/likes', to: "likes#index", as: 'likes'
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy", as: "logout"
 end
