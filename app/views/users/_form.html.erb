@@ -1,9 +1,9 @@
 <%= form_for (@user) do |f| %>
 <ul>
-  <li><%= f.label  :username %>
-  <%= f.text_field :username %></li>
+  <li><%= f.label  :email %>
+  <%= f.text_field :email %></li>
 
-  <li><%= f.label  :password%>
+  <li><%= f.label  :create_a_secure_password%>
   <%= f.password_field :password %></li>
   
   <li><%= f.label  :first_name %>
@@ -21,12 +21,14 @@
   <li><%= f.label :bio %>
   <%= f.text_area :bio %></li>
 
-  <li><%= f.label :image %>
-  <%= f.file_field :image %></li>
+  <li><%= f.label :picture %>
+  <%= f.file_field :picture %></li>
   
 </ul>
   <%= f.submit %>
   <% end %>
+
+  
 
 
 

@@ -21,7 +21,7 @@
       <button><%= link_to "My Dates", users_path %></button>
       <button><%= link_to "Interests", users_path %></button>
       <button><%= link_to "Logout", logout_path, method: :delete %></button>
-      <h2>Hi, <%= current_user.username %>!</h2>
+      <h2>Hi, <%= current_user.first_name %>!</h2>
     <% else %>
     <%= image_tag("logo/CWC LOGO.png", width: 60, height: 50) %>
       <button><%= link_to "Login", login_path %></button> 
