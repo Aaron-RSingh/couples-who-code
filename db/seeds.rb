@@ -13,7 +13,7 @@ Like.destroy_all
 Connection.destroy_all
 
 
-Interest.create(name: "Pokemon")
+# Interest.create(name: "Pokemon")
 User.create(first_name: "jimbo", last_name: "bimbos", email: "jimbo.bimbo@gmail.com", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
 User.create(first_name: "jimbo", last_name: "limbo", email: "jimbo.kimbo@gmail.com", password: "123", tagline: "Best world ever", age: 25, picture: "this is a picture", bio: "CHAT SHIT GET BANGED")
 Meetup.create(description: "went to a bar")

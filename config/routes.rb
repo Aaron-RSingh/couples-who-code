@@ -8,9 +8,12 @@ Rails.application.routes.draw do
   get '/new', to: 'users#new', as: 'new_user'
   get '/users/:id', to: 'users#show', as: 'user'
 
+  #like
+  get '/likes', to: "likes#new", as: 'likes'
+  post '/likes', to: "likes#create"
+
   #session
   get '/login', to: "sessions#new", as: 'login'
-  get '/likes', to: "likes#index", as: 'likes'
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy", as: "logout"
 end
