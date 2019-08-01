@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
-    before_action :user_id, only: [:show]
-    
+    before_action :user_id, only: [:show, :same_interests]
+#    helper_method :finding_users
+
     def show 
+        @interests = @user.interests.uniq
+        
+        # @interests_users = interests.users
+        # @names = @interests_users.map{|user| user} 
     end 
     
     def home
@@ -20,8 +25,12 @@ class UsersController < ApplicationController
         redirect_to user_path(@user)
      else
      redirect_to new_user_path
+     end 
     end 
- end 
+
+    
+
+
 
     private 
 
