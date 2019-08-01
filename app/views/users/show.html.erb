@@ -12,15 +12,15 @@
     <br>
 
 
-    <% if @user.interests %>
+    <% if !@user.interests.empty? %>
         <h3>Potential matches ;)</h3>
         <% @interests.map do |interest| %>
         <div>
-          <%= interest.name %>
+          <%= link_to interest.name, new_connection_path %>
           <% interest.excluded_user_interests(@user).map do |user| %>
           <ul><li>
-            <%= user.first_name %>
-            <% end %>
+          <button><%= link_to user.first_name + (" ") + user.last_name, user_path(user)%></button>
+            <% end %> 
             </li>
             </ul>
         </div>
@@ -28,13 +28,13 @@
       
 
     <% else %>
+      <h5>Please select an interest to match with potential future romances</h5>
       <button><%=link_to("Add interest", likes_path)%></button>
     <% end %>
     </ul>
 
  <br>
 
-     <!-- Add interest -->
-     <button><%=link_to("Add interest", likes_path)%></button>
+ 
   </div>
 </div>

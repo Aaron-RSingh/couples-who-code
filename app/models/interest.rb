@@ -5,4 +5,5 @@ class Interest < ApplicationRecord
     def excluded_user_interests(excluded_user)
         self.users.select{|user| user.id != excluded_user.id}
     end
+
 end

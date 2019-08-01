@@ -1,0 +1,7 @@
+<%= form_for @connection do |f| %>
+<%= current_user_interests %>
+
+<%= f.label :meetup %>
+<%= f.collection_select :meetup_id, Meetup.all, :id, :description %>
+<%= f.submit%>
+<% end %>
