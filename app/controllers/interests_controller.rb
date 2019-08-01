@@ -4,4 +4,8 @@ class InterestsController < ApplicationController
     @interests = Interest.all 
   end 
 
+  # def show
+  #   @interest = Interest.find(params[:id])
+  # end
+
 end

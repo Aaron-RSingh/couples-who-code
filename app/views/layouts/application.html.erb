@@ -11,13 +11,14 @@
   
   <div>
   <body>
+  <div>
       <% if flash[:notice] %>
       <h4><%= flash[:notice] %></h4>
     <% end %>
 
     <% if current_user %>
     <%= image_tag("logo/CWC LOGO.png", width: 60, height: 50) %>
-      <button><%= link_to "My Profile", users_path %></button>
+      <button><%= link_to "My Profile", @user %></button>
       <button><%= link_to "My Dates", users_path %></button>
       <button><%= link_to "Interests", users_path %></button>
       <button><%= link_to "Logout", logout_path, method: :delete %></button>
@@ -27,7 +28,11 @@
       <button><%= link_to "Login", login_path %></button> 
       <button><%=link_to "Sign Up", "/new" %></button>
     <% end %>
+  
+    </div>
+    <div>
     <%= yield %>
+    </div>
   </body>
   </div>
 </html>
