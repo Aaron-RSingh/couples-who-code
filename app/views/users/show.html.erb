@@ -9,6 +9,31 @@
     
      <p><%= @user.bio%></p>
     
+    <br>
+
+
+    <% if @user.interests %>
+        <h3>Potential matches ;)</h3>
+        <% @interests.map do |interest| %>
+        <div>
+          <%= interest.name %>
+          <% interest.excluded_user_interests(@user).map do |user| %>
+          <ul><li>
+            <%= user.first_name %>
+            <% end %>
+            </li>
+            </ul>
+        </div>
+        <% end %>
+      
+
+    <% else %>
+      <button><%=link_to("Add interest", likes_path)%></button>
+    <% end %>
+    </ul>
+
+ <br>
+
      <!-- Add interest -->
      <button><%=link_to("Add interest", likes_path)%></button>
   </div>

@@ -13,4 +13,14 @@ class User < ApplicationRecord
     validates :email, uniqueness: true
     validates :age, numericality: true
 
+    def interest_info 
+        @interests = @user.interests.uniq.each {|interest| interest.name}
+        @interest_name = @interests[0].name
+        @interest_users = @interests[0].users.select{|user| user.id != @user.id}
+        @interest_users_names = @interest_users.map{|user| user.first_name}
+    end
+
+    # def 
+    # @interest_users = @interests[0].users.select{|user| user.id != @user.id}
+
 end
