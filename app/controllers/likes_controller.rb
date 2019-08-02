@@ -15,7 +15,7 @@ class LikesController < ApplicationController
     # session[:user_id] = @user.id
     #can change later?
     @like.save
-    redirect_to user_path(session[:user_id])
+    redirect_to user_path(current_user)
 
   end 
 

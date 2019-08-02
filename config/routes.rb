@@ -21,4 +21,7 @@ Rails.application.routes.draw do
   get '/connections/new', to: "connections#new", as: "new_connection"
   post '/connections', to: "connections#create"
 
+  #meetup
+  get '/meetups', to: 'meetups#index'
+
 end

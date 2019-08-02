@@ -11,11 +11,10 @@
         <div>
           <%= link_to interest.name, new_connection_path %>
           <% interest.excluded_user_interests(current_user).map do |user| %>
-          <ul><li>
+          <li>
           <button><%= link_to user.first_name + (" ") + user.last_name, user_path(user)%></button>
             <% end %> 
             </li>
-            </ul>
         </div>
         
         <% end %>
