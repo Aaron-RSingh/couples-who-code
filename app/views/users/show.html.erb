@@ -1,40 +1,43 @@
-
-
   <div class="text-right">
     <%= image_tag(@user.picture) %>
     <h3 class="text-right"><%= @user.first_name %> </h3>
     <h3><%= @user.age %></h3>
- 
-     <h3><%= @user.tagline %></h3>
-    
-     <p><%= @user.bio%></p>
-    
+     <h3>Tagline: <%= @user.tagline %></h3>
+     <p>Bio: <%= @user.bio%></p>
     <br>
-
-
     <% if !@user.interests.empty? %>
         <h3>Potential matches ;)</h3>
         <% @interests.map do |interest| %>
         <div>
           <%= link_to interest.name, new_connection_path %>
-          <% interest.excluded_user_interests(@user).map do |user| %>
+          <% interest.excluded_user_interests(current_user).map do |user| %>
           <ul><li>
           <button><%= link_to user.first_name + (" ") + user.last_name, user_path(user)%></button>
             <% end %> 
             </li>
             </ul>
         </div>
+        
         <% end %>
-      
-
     <% else %>
       <h5>Please select an interest to match with potential future romances</h5>
       <button><%=link_to("Add interest", likes_path)%></button>
     <% end %>
     </ul>
-
- <br>
-
+  <br>
  
+  <% if @user != current_user %>
+    <p>Would you like to meet up with <%= @user.first_name %>?</p>
+    <%= form_for Connection.new do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :companion, :value => @user.id  %>
+    <%= f.label :meetup %>
+    <%= f.collection_select :meetup_id, Meetup.all, :id, :description %>
+    <%= f.submit%>
+    <% end %>
+  <% else %>
+    Why don't you try checking out someone's profile? :)
+  <% end %>
+  
+    </div>
   </div>
-</div>
