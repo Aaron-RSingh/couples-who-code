@@ -1,0 +1,6 @@
+<% current_user.meetups.each do |meetup| %>
+<ul>
+You <%= meetup.description %> and went with <%= meetup.users[0].first_name %>, we hope you enjoyed and decided to not see them again and pick a new interest.
+<% end %>
+</ul>
+<%= link_to 'Go back to your profile', user_path(current_user) %>
