@@ -76,7 +76,7 @@ end
 end
 
 20.times do
-  Connection.create(companion: User.all.sample, user: User.all.sample, meetup: Meetup.all.sample)
+  Connection.create(companion: User.all.sample.id, user: User.all.sample, meetup: Meetup.all.sample)
 end
 
 p "I have now seeded."

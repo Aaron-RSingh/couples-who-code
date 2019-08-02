@@ -1,5 +1,14 @@
 <%= form_for @connection do |f| %>
-<%= current_user_interests %>
+
+<!-- need to write this in another place -->
+<!-- make a drop down list for  -->
+<!-- using response from above lines, use interest to find similar users through a drop down list-->
+
+
+option to pick another user that has the same interest (previously clicked)
+
+<br>
+<br>
 
 <%= f.label :meetup %>
 <%= f.collection_select :meetup_id, Meetup.all, :id, :description %>

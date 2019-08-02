@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :authorize_user, current_user_interests
+  helper_method :current_user, :authorize_user, :current_user_interests
 
   def current_user 
     if session[:user_id]
@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     end 
   end 
 
+  # move to users model
   def current_user_interests
     current_user.interests
   end 
