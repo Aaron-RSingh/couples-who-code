@@ -11,12 +11,13 @@
   
   <div>
   <body>
-  <div>
+  <div class="nav">
       <% if flash[:notice] %>
       <h4><%= flash[:notice] %></h4>
     <% end %>
 
     <% if current_user %>
+    <div class="nav">
     <%= image_tag("logo/CWC LOGO.png", width: 60, height: 50) %>
       <button><%= link_to "My Profile", @user %></button>
       <button><%= link_to "My Dates", users_path %></button>
@@ -28,7 +29,7 @@
       <button><%= link_to "Login", login_path %></button> 
       <button><%=link_to "Sign Up", "/new" %></button>
     <% end %>
-  
+    </div>
     </div>
     <div>
     <%= yield %>

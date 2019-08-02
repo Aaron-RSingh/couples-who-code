@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :authorize_user, current_user_interests
+  helper_method :current_user, :authorize_user
 
   def current_user 
     if session[:user_id]
@@ -12,10 +12,6 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "Sorry, you need to be logged in to access that feature."
       redirect_to login_path
     end 
-  end 
-
-  def current_user_interests
-    current_user.interests
   end 
 
 
